@@ -9,11 +9,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
     font-size: 2.5rem;
 
     .container {
-        // width: 100%;
         background-color: #BB1233;
         padding: 2rem;
         border-radius: 10px;
@@ -36,11 +34,13 @@ body {
 
             button {
                 border-radius: 100%;
+                border: none;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                 width: 5rem;
                 height: 5rem;
                 margin: 1rem;
                 color: black;
-                // padding: 1rem;
+
             }
 
 
