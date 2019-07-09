@@ -12,6 +12,7 @@ const Operators = props => {
         <OperatorButton
           key={operator.char}
           char={operator.char}
+          operator={operator.value}
           handleInput={props.handleInput}
         />
       ))}

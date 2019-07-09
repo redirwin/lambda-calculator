@@ -9,17 +9,20 @@ import Display from "../src/components/DisplayComponents/Display";
 import Logo from "./components/DisplayComponents/Logo";
 
 function App() {
-  // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
-  // Once the state hooks are in place write some functions to hold data in state and update that data depending on what it needs to be doing
-  // Your functions should accept a parameter of the the item data being displayed to the DOM (ie - should recieve 5 if the user clicks on
-  // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
-  // Don't forget to pass the functions (and any additional data needed) to the components as props
-
-  const [display, updateDisplay] = useState("0");
+  const [display, updateDisplay] = useState("");
 
   function handleInput(input) {
-    console.log(display.concat(input));
-    input !== "=" ? updateDisplay(display.concat(input)) : evaluate(display);
+    switch (input) {
+      case "=":
+        evaluate(display);
+        break;
+      case "C":
+        updateDisplay("");
+        break;
+
+      default:
+        updateDisplay(display.concat(input));
+    }
   }
 
   function evaluate(display) {
@@ -35,8 +38,6 @@ function App() {
         <Specials handleInput={handleInput} />
         <Numbers handleInput={handleInput} />
         <Operators handleInput={handleInput} />
-
-        {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
       </div>
     </div>
   );
