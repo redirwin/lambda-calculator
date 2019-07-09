@@ -1,5 +1,5 @@
 import React from "react";
-import "./normalize.scss"
+import "./normalize.scss";
 import "./App.scss";
 
 import Numbers from "../src/components/ButtonComponents/NumberButtons/Numbers";
@@ -24,11 +24,10 @@ function App() {
     <div className="container">
       <Logo />
       <div className="App">
-        <Logo />
         <Display />
+        <Specials />
         <Numbers />
         <Operators />
-        <Specials />
 
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
       </div>

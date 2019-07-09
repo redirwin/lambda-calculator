@@ -1,7 +1,57 @@
-.container {
-    max-width: 50rem;
-    width: 50rem;
-    max-height: 650rem;
-    height: 650rem;
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid red;
+    font-size: 2.5rem;
+
+    .container {
+        // width: 100%;
+        background-color: #BB1233;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        .App {
+
+            margin: 1.5rem;
+
+            .display {
+                background-color: #2D2829;
+                color: white;
+                text-align: right;
+                margin: 1.5rem 0;
+                padding: 1rem;
+                border-radius: 20px;
+
+            }
+
+
+            button {
+                border-radius: 100%;
+                width: 5rem;
+                height: 5rem;
+                margin: 1rem;
+                color: black;
+                // padding: 1rem;
+            }
+
+
+
+
+        }
+
+
+
+    }
+
+
+
 }
