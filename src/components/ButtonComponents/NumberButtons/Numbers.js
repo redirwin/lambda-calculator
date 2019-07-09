@@ -10,9 +10,9 @@ const Numbers = props => {
     <div>
       {numbersList.map(number => (
         <NumberButton
+          key={number}
           number={number}
           handleInput={props.handleInput}
-          key={number}
         />
       ))}
     </div>

@@ -3,13 +3,17 @@ import React, { useState } from "react";
 import { operators } from "../../../data";
 import OperatorButton from "./OperatorButton";
 
-const Operators = () => {
+const Operators = props => {
   const [operatorsList, setOperators] = useState(operators);
 
   return (
     <div>
       {operatorsList.map(operator => (
-        <OperatorButton key={operator.char} char={operator.char} />
+        <OperatorButton
+          key={operator.char}
+          char={operator.char}
+          handleInput={props.handleInput}
+        />
       ))}
     </div>
   );
