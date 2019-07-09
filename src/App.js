@@ -19,7 +19,12 @@ function App() {
 
   function handleInput(input) {
     console.log(display.concat(input));
-    updateDisplay(display.concat(input));
+    input !== "=" ? updateDisplay(display.concat(input)) : evaluate(display);
+  }
+
+  function evaluate(display) {
+    console.log("Evaluate this: ", display);
+    updateDisplay(eval(display));
   }
 
   return (
