@@ -16,7 +16,6 @@ function App() {
     switch (input) {
       case "C":
         updateDisplay("");
-        updateExpression();
         break;
 
       case "+/-":
@@ -32,14 +31,17 @@ function App() {
         break;
 
       case "%":
-        updateDisplay();
-        updateExpression();
+      case "+":
+      case "-":
+      case "*":
+      case "/":
+        updateDisplay(display.concat(input));
+
         break;
 
       case "=":
-        let answer = eval(expression);
-        updateDisplay(answer);
-        updateExpression();
+        updateExpression(display);
+        updateDisplay(eval(display));
 
         break;
 
@@ -47,14 +49,6 @@ function App() {
         updateDisplay(display.concat(input));
     }
   }
-
-  // function togglePositive() {
-  //   let newDisplay = "";
-  //   display.slice(0, 1) !== "-"
-  //     ? (newDisplay = `-${display}`)
-  //     : (newDisplay = display.slice(1, display.length));
-  //   updateDisplay(newDisplay);
-  // }
 
   return (
     <div className="container">
