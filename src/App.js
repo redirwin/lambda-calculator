@@ -10,23 +10,51 @@ import Logo from "./components/DisplayComponents/Logo";
 
 function App() {
   const [display, updateDisplay] = useState("");
+  const [expression, updateExpression] = useState();
 
   function handleInput(input) {
     switch (input) {
-      case "=":
-        evaluate(display);
-        break;
       case "C":
         updateDisplay("");
+        updateExpression();
         break;
+
+      case "+/-":
+        if (!display) {
+          updateDisplay(display);
+        } else {
+          let newDisplay = "";
+          display.slice(0, 1) !== "-"
+            ? (newDisplay = `-${display}`)
+            : (newDisplay = display.slice(1, display.length));
+          updateDisplay(newDisplay);
+        }
+        break;
+
+      case "%":
+        updateDisplay();
+        updateExpression();
+        break;
+
+      case "=":
+        let answer = eval(expression);
+        updateDisplay(answer);
+        updateExpression();
+
+        break;
+
       default:
         updateDisplay(display.concat(input));
     }
   }
 
-  function evaluate(display) {
-    updateDisplay(eval(display));
-  }
+  // function togglePositive() {
+  //   let newDisplay = "";
+  //   display.slice(0, 1) !== "-"
+  //     ? (newDisplay = `-${display}`)
+  //     : (newDisplay = display.slice(1, display.length));
+  //   updateDisplay(newDisplay);
+  // }
 
   return (
     <div className="container">
