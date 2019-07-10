@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -11,47 +15,102 @@ body {
     align-items: center;
     font-size: 2.5rem;
 
+    box-sizing: border-box;
+
+    #root {
+        width: 35%;
+        max-width: 350px;
+    }
+
     .container {
         background-color: #BB1233;
         padding: 2rem;
+        margin: 0;
+        // height: 600px;
+        // max-height: 60vh;
         border-radius: 10px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
         .App {
-
             margin: 1.5rem;
+            height: 100%;
 
             .display {
                 background-color: #2D2829;
                 color: white;
                 text-align: right;
+                letter-spacing: .5rem;
                 margin: 1.5rem 0;
-                padding: 1rem;
-                border-radius: 20px;
-
+                padding: 1.5rem;
+                border-radius: 20rem;
             }
 
+            .button-container {
+                display: flex;
+                justify-content: space-between; 
+                
 
-            button {
-                border-radius: 100%;
-                border: none;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                width: 5rem;
-                height: 5rem;
-                margin: 1rem;
-                color: black;
+                button {
+                    border-radius: 100%;
+                    border: 1px solid #113C78;
+                    color: black;
+                    color: white;
+                    width: 5rem;
+                    height: 5rem;
+                    margin: .5rem;
+
+
+                    &:nth-of-type(10n) {
+                        border-radius: 20rem;
+                        width: 13rem;
+                        margin-right: 0;
+                    }
+                }
+
+                .col-left {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    justify-content: space-between; 
+                    width: 75%;
+
+                    .numbers-container, .specials-container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                    }
+
+                    .special-button {
+                        background-color: #2061B0;
+                    }
+
+                    .number-button {
+                        background-color: #113C78;
+                    }
+                }
+
+                .col-right {
+                    display: flex;
+                    flex-direction: column;
+                    width: 25%;
+                    
+                    .operators-container {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        align-content: center;
+                        align-items: center;
+                    }
+
+                    .operator-button {
+                        background-color: #3DB5E5
+                    }
+
+                }
+
+
 
             }
-
-
-
-
         }
-
-
-
     }
-
-
-
 }

@@ -53,9 +53,15 @@ function App() {
       <Logo />
       <div className="App">
         <Display display={display} />
-        <Specials handleInput={handleInput} />
-        <Numbers handleInput={handleInput} />
-        <Operators handleInput={handleInput} />
+        <div className="button-container">
+          <div className="col-left">
+            <Specials handleInput={handleInput} />
+            <Numbers handleInput={handleInput} />
+          </div>
+          <div className="col-right">
+            <Operators handleInput={handleInput} />
+          </div>
+        </div>
       </div>
     </div>
   );

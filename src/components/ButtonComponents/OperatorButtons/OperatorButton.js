@@ -4,7 +4,10 @@ const OperatorButton = props => {
   return (
     <>
       {
-        <button onClick={() => props.handleInput(props.operator)}>
+        <button
+          className="operator-button"
+          onClick={() => props.handleInput(props.operator)}
+        >
           {props.char}
         </button>
       }

@@ -7,7 +7,7 @@ const Specials = props => {
   const [specialsList, setSpecials] = useState(specials);
 
   return (
-    <div>
+    <div className="specials-container">
       {specialsList.map(special => (
         <SpecialButton
           key={special}

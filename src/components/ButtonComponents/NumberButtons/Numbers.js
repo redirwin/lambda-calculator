@@ -7,7 +7,7 @@ const Numbers = props => {
   const [numbersList, setNumber] = useState(numbers);
 
   return (
-    <div>
+    <div className="numbers-container">
       {numbersList.map(number => (
         <NumberButton
           key={number}

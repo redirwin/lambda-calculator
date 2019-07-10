@@ -4,7 +4,10 @@ const SpecialButton = props => {
   return (
     <>
       {
-        <button onClick={() => props.handleInput(props.special)}>
+        <button
+          className="special-button"
+          onClick={() => props.handleInput(props.special)}
+        >
           {props.special}
         </button>
       }

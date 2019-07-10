@@ -7,7 +7,7 @@ const Operators = props => {
   const [operatorsList, setOperators] = useState(operators);
 
   return (
-    <div>
+    <div className="operators-container">
       {operatorsList.map(operator => (
         <OperatorButton
           key={operator.char}

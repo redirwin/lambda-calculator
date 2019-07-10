@@ -4,7 +4,10 @@ const NumberButton = props => {
   return (
     <>
       {
-        <button onClick={() => props.handleInput(props.number)}>
+        <button
+          className="number-button"
+          onClick={() => props.handleInput(props.number)}
+        >
           {props.number}
         </button>
       }
