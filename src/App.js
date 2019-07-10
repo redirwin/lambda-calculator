@@ -35,12 +35,10 @@ function App() {
       case "*":
       case "/":
         updateDisplay(display.concat(input));
-
         break;
 
       case "=":
         updateDisplay(eval(display).toString());
-
         break;
 
       default:
