@@ -10,7 +10,6 @@ import Logo from "./components/DisplayComponents/Logo";
 
 function App() {
   const [display, updateDisplay] = useState("");
-  const [expression, updateExpression] = useState();
 
   function handleInput(input) {
     switch (input) {
@@ -40,8 +39,7 @@ function App() {
         break;
 
       case "=":
-        updateExpression(display);
-        updateDisplay(eval(display));
+        updateDisplay(eval(display).toString());
 
         break;
 
