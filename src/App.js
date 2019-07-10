@@ -19,14 +19,12 @@ function App() {
       case "C":
         updateDisplay("");
         break;
-
       default:
         updateDisplay(display.concat(input));
     }
   }
 
   function evaluate(display) {
-    console.log("Evaluate this: ", display);
     updateDisplay(eval(display));
   }
 
